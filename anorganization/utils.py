@@ -18,10 +18,10 @@ def image_path(instance, filename):
     )
 
     if getattr(settings, 'ANORGANIZATION_USE_TOKEN_FILENAME', False):
-        return PurePath(instance.app_label).joinpath(
+        return PurePath(instance._meta.app_label).joinpath(
                 f'{token_urlsafe()}{PurePath(filename).suffix}')
     else:
-        return PurePath(instance.app_label).joinpath(cleaned_filename)
+        return PurePath(instance._meta.app_label).joinpath(cleaned_filename)
 
 
 def image_url(instance):
