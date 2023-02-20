@@ -54,6 +54,14 @@ class Membership(models.Model):
     serial_number = models.CharField(max_length=100, blank=True)
     dn = models.CharField(max_length=255, blank=True)
     attributes = models.JSONField(blank=True)
+    image = models.ImageField(
+        upload_to=image_path,
+        help_text=(
+            'Upload file should under size limitation, '
+            'with png, jpg or jpeg file extensions.'
+        ),
+        blank=True
+    )
 
     # flag
     is_valid = models.BooleanField(
@@ -70,3 +78,7 @@ class Membership(models.Model):
 
     def __str__(self):
         return self.user.username
+
+    @property
+    def image_url(self):
+        return image_url(self)

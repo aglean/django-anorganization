@@ -129,11 +129,10 @@ def resolve_anorganization_memberships(obj, indo, **kwargs):
     if filters:
         queryset = obj.filter(reduce(operator.and_, filters)) \
                 if isinstance(obj, QuerySet) \
-                else Organization.objects.filter(reduce(operator.and_,
-                                                        filters))
+                else Membership.objects.filter(reduce(operator.and_, filters))
     else:
         queryset = obj if isinstance(obj, QuerySet) \
-                else Organization.objects.all()
+                else Membership.objects.all()
 
     return queryset
 

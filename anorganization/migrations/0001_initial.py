@@ -22,6 +22,7 @@ class Migration(migrations.Migration):
                 ('serial_number', models.CharField(blank=True, max_length=100)),
                 ('dn', models.CharField(blank=True, max_length=255)),
                 ('attributes', models.JSONField(blank=True)),
+                ('image', models.ImageField(blank=True, help_text='Upload file should under size limitation, with png, jpg or jpeg file extensions.', upload_to=anorganization.utils.image_path)),
                 ('is_valid', models.BooleanField(default=True, help_text='Designates whether the membership is valid.')),
                 ('created_at', models.DateTimeField(auto_now_add=True)),
                 ('updated_at', models.DateTimeField(auto_now=True)),
