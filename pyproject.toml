@@ -30,13 +30,15 @@ classifiers = [
 requires-python = ">= 3.10"
 dependencies = [
     "django >= 4.0",
-    "ariadne >= 0.16.0",
-    "ariadne-relay >= 0.1.0a8",
     "pillow >= 9.4.0",
 ]
 dynamic = ["version"]
 
 [project.optional-dependencies]
+graphql = [
+    "ariadne >= 0.16.0",
+    "ariadne-relay >= 0.1.0a8",
+]
 dev = [
     "python-lsp-server[rope,pyflakes,mccabe,pycodestyle,autopep8]",
     "pylsp-rope",

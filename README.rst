@@ -11,8 +11,6 @@ Requirements
 
 * Python 3.10+
 * django 4.0+
-* ariadne 0.16.0+
-* ariadne-relay 0.1.0a8+
 * pillow 9.4.0+
 
 --------
@@ -48,6 +46,12 @@ Ariadne types and resolvers
 ---------------------------
 
 Integrate predefined types and resolvers to scheme.
+
+Requirements
+-----------
+
+* ariadne 0.16.0+
+* ariadne-relay 0.1.0a8+
 
 **resolvers**
 
