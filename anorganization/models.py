@@ -25,9 +25,6 @@ class Organization(models.Model):
         blank=True
     )
 
-    class Meta:
-        ordering = ['name']
-
     def __str__(self):
         return self.name
 
@@ -72,9 +69,6 @@ class Membership(models.Model):
     # datetime
     created_at = models.DateTimeField(auto_now=False, auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True, auto_now_add=False)
-
-    class Meta:
-        ordering = ['-updated_at']
 
     def __str__(self):
         return self.user.username

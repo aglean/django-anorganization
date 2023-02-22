@@ -27,9 +27,6 @@ class Migration(migrations.Migration):
                 ('created_at', models.DateTimeField(auto_now_add=True)),
                 ('updated_at', models.DateTimeField(auto_now=True)),
             ],
-            options={
-                'ordering': ['-updated_at'],
-            },
         ),
         migrations.CreateModel(
             name='Organization',
@@ -41,9 +38,6 @@ class Migration(migrations.Migration):
                 ('image', models.ImageField(blank=True, help_text='Upload file should under size limitation, with png, jpg or jpeg file extensions.', upload_to=anorganization.utils.image_path)),
                 ('members', models.ManyToManyField(through='anorganization.Membership', to=settings.AUTH_USER_MODEL)),
             ],
-            options={
-                'ordering': ['name'],
-            },
         ),
         migrations.AddField(
             model_name='membership',
