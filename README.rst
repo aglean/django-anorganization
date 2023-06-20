@@ -48,7 +48,7 @@ Ariadne types and resolvers
 Integrate predefined types and resolvers to scheme.
 
 Requirements
------------
+------------
 
 * ariadne 0.16.0+
 * ariadne-relay 0.1.0a8+
@@ -88,18 +88,18 @@ Async version
    query.set_field('organizations', resolve_anorganizations)
 
 
-* resolve_anorganization_instance,
-* resolve_anorganization_member_connection,
-* resolve_anorganization_membership_instance,
-* resolve_anorganizations,
+* resolve_anorganization_instance
+* resolve_anorganization_member_connection
+* resolve_anorganization_membership_instance
+* resolve_anorganizations
 * resolve_anorganization_memberships
 
 Sync version
 
-* resolve_anorganization_instance_sync,
-* resolve_anorganization_member_connection_sync,
+* resolve_anorganization_instance_sync
+* resolve_anorganization_member_connection_sync
 * resolve_anorganization_membership_instance_sync
-* resolve_anorganizations_sync,
+* resolve_anorganizations_sync
 * resolve_anorganization_memberships_sync
 
 -------
