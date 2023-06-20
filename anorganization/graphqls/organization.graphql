@@ -6,7 +6,7 @@ type AnOrganization implements Node {
     imageUrl: String
     validMemberCount: Int!
     invalidMemberCount: Int!
-    members: UserConnection
+    members: AnOrganizationMembershipConnection
 }
 
 type AnOrganizationConnection {

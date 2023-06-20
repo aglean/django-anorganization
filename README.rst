@@ -53,20 +53,54 @@ Requirements
 * ariadne 0.16.0+
 * ariadne-relay 0.1.0a8+
 
-**resolvers**
+**schema**
 
-* resolve_anorganizations
-* resolve_anorganization_memberships
+.. code:: python
+
+   from anorganization.graphqls import anorganization_schema
+
+
+* anarticle/graphqls/article.graphql
+* anarticle/graphqls/tag.graphql
 
 **types**
+
+.. code:: python
+
+   from anorganization.graphqls import anorganization_bindables
+
 
 * anorganization
 * anorganization_membership
 
-**graphql**
+**resolvers**
 
-* anorganization/graphqls/organization.graphql
-* anorganization/graphqls/membership.graphql
+Async version
+
+.. code:: python
+
+   from anorganization.graphqls import resolve_anorganization_instance, \
+           resolve_anorganization_member_connection, resolve_anorganizations
+
+   anorganization.set_instance_resolver(resolve_anorganization_instance)
+   anorganization.set_connection('members', resolve_anorganization_member_connection)
+
+   query.set_field('organizations', resolve_anorganizations)
+
+
+* resolve_anorganization_instance,
+* resolve_anorganization_member_connection,
+* resolve_anorganization_membership_instance,
+* resolve_anorganizations,
+* resolve_anorganization_memberships
+
+Sync version
+
+* resolve_anorganization_instance_sync,
+* resolve_anorganization_member_connection_sync,
+* resolve_anorganization_membership_instance_sync
+* resolve_anorganizations_sync,
+* resolve_anorganization_memberships_sync
 
 -------
 License
